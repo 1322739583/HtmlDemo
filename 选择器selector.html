@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style rel="stylesheet">
+        #box {
+
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--这样就能用，不需要设置name,value什么的-->
+    <select >
+        <option>苹果</option>
+        <!--这个属性可以默认选择-->
+        <option selected>桃子</option>
+        <option>葡萄</option>
+        <option>香蕉</option>
+    </select>
+    <!--用不上-->
+    <select multiple>
+        <option>苹果</option>
+        <option>桃子</option>
+        <option>葡萄</option>
+        <option>香蕉</option>
+    </select>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#box",
+        data: {
+            message: "hello",
+            citys: ["北京", "上海", "广州", "深圳"],
+            letters: ["A", "B", "C", "D", "E"],
+            numbers: [1, 2, 3, 4, 5]
+        },
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

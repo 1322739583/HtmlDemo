@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--<link rel="stylesheet" href="./xxx.css">-->
+
+    <style rel="stylesheet">
+        table, th, td {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 77px;
+
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--    th表示table header,td 表示table data-->
+
+    <table>
+        <thead>
+        <tr>
+            <th colspan="6">课程表</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>星期1</th>
+            <th>星期2</th>
+            <th>星期3</th>
+            <th>星期4</th>
+            <th>星期5</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td rowspan="2">上午</td>
+            <td>语文</td>
+            <td>体育</td>
+            <td>数学</td>
+            <td>音乐</td>
+            <td>科学</td>
+        </tr>
+        <tr>
+
+            <td>科学</td>
+            <td>历史</td>
+            <td>电脑</td>
+            <td>数学</td>
+            <td>语文</td>
+        </tr>
+        <tr>
+            <td colspan="6">午休</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">下午</td>
+            <td>语文</td>
+            <td>体育</td>
+            <td>数学</td>
+            <td>音乐</td>
+            <td>科学</td>
+        </tr>
+        <tr>
+            <td>科学</td>
+            <td>历史</td>
+            <td>电脑</td>
+            <td>数学</td>
+            <td>语文</td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+</body>
+</html>

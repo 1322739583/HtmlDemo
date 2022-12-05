@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="/common/css/reset.css">
+
+    <style rel="stylesheet">
+        #content {
+
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <!--
+     1.controls 添加控制条
+     2.autoplay 大部分浏览器都是无效的，需要同时设置muted静音才可以播放。
+     直接播放吓到用户，体验不好。
+     3.preload预加载信息，缓存，时长等。
+     -->
+    <video  controls autoplay muted preload="metadata" width="500">
+        <!-- 支持多个源，提高兼容性 -->
+        <!-- 我自己的两个视频文件talk.flv和video.mp4都是不可以播放的，虽然是mp4内部还是有区别的 -->
+        <!-- <source src="./assert/flower.webm" type="video/webm"> -->
+        <source src="./assert/flower.mp4" type="video/mp4">
+        <p>
+            暂不支持这种格式
+        </p>
+    </video>
+</div>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
