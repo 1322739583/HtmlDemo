@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("../images/grid.png");
+        }
+        #canvasId {
+            background: rgba(255,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvasId" width="300" height="300">
+    您的IE8及以下浏览器不支持canvas,请升级或者更换浏览器
+</canvas>
+<script>
+    window.onload = function () {
+        const canvasEL = document.getElementById("canvasId")
+        //获取上下文对象，这个上下文对象能用于实现各种图形的绘制。
+        if (!canvasEL.getContext('2d')){//IE8兼容写法，现在不需要了
+            return
+        }
+        //ctx返回的是CanvasRenderingContext2D这个对象
+        const ctx=canvasEL.getContext('2d')// 2d | webgl
+        console.log(ctx)
+        ctx.fillRect(0,0,150,100)
+    }
+</script>
+</body>
+</html>

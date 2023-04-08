@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-image: url("../images/grid.png");
+    }
+
+    #canvasId {
+      background: rgba(255, 0, 0, 0.1);
+      /*width: 300px;*/
+      /*height: 300px;*/
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvasId" width="300" height="300" >
+
+</canvas>
+<script>
+  window.onload = function () {
+    const canvasEl = document.getElementById("canvasId")
+    const ctx = canvasEl.getContext('2d')
+
+    ctx.strokeStyle="#1870ca"
+    ctx.lineWidth=10//往两边占据
+    ctx.beginPath()
+    ctx.moveTo(10,10)
+    ctx.lineTo(100,10)
+    ctx.closePath()
+    ctx.stroke()//每个beginPath都要对应一个stroke
+
+    //要重新设置样式，必须要重新beginPath,不然还是用原来的样式,close是没有用的
+    ctx.beginPath()
+    ctx.strokeStyle="#18ca24"
+    ctx.moveTo(10,50)
+    ctx.lineTo(100,50)
+    ctx.closePath()
+    ctx.stroke()
+
+  }
+</script>
+</body>
+</html>

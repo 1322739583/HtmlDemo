@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url("../images/grid.png");
+        }
+
+        #canvasId {
+            background: rgba(255, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvasId" width="300" height="500" >
+
+</canvas>
+<script>
+    window.onload = function () {
+        const canvasEl = document.getElementById("canvasId")
+        const ctx = canvasEl.getContext('2d')
+        ctx.fillStyle = "#ccccff"
+        ctx.fillRect(0, 0, 100, 50)
+
+        ctx.strokeStyle="#1870ca"
+        ctx.strokeRect(100,100,100,50)
+
+        // ctx.clearRect(0,0,300,300)
+    }
+</script>
+</body>
+</html>
